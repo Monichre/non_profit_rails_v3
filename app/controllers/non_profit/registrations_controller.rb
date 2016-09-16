@@ -5,6 +5,6 @@ class NonProfit::RegistrationsController < Devise::RegistrationsController
   end
   private
   def sign_up_params
-    params.require(:non_profit).permit(:name, :location, :mission)
+    params.require(:non_profit).permit(:name, :location, :mission, :email, :password, :password_confirmation)
   end
 end
