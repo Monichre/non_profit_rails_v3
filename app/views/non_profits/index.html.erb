@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <% if @non_profits.any? %>
+      <% @non_profits.each do |non_profit| %>
+        <section>
+          <h1 class="title text-center"><%= non_profit.name %>, <%=non_profit.location%></h1>
+          <p class="mission">
+            <%= non_profit.mission %>
+          </p>
+        </section>
+      <% end %>
+    <%end%>
+  </div>
+</div>
