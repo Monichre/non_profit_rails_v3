@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "should be Humanitarian by default" do
+    category = FactoryGirl.create(:category)
+    expect(category.name).to eq('Humanitarian')
+  end
+
 end
