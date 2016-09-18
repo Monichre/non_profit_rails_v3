@@ -8,6 +8,14 @@
             <%= non_profit.mission %>
           </p>
         </section>
+        <section>
+          <% if user_signed_in? %>
+            <div class="form-wrapper">
+              <%= button_to "Add this non-profit", user_path(current_user), {method: 'patch', params: non_profit} %>
+            </div>
+          <% end %>
+
+        </section>
       <% end %>
     <%end%>
   </div>
