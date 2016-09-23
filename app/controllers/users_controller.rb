@@ -17,23 +17,22 @@ class UsersController < ApplicationController
   end
 
   def update
-    @non_profit = NonProfit.find(params[:id])
-    if user_params.has_key?('image')
+    # binding.pry
+    if (user_params.has_key?('image')) || (user_params.has_key?('bio'))
       current_user.update(user_params)
       redirect_to user_path(current_user)
-    else
-      @user.non_profits.push(@non_profit)
-      redirect_to user_path(current_user)
-      binding.pry
     end
   end
-
-
-
+  def destroy
+    # binding.pry
+    @non_profit = NonProfit.find(params[:non_profit_id])
+    @user.non_profits.destroy(@non_profit)
+    redirect_to user_path(@user)
+  end
   private
 
   def user_params
-    params.require(:user).permit(:image)
+    params.require(:user).permit(:image, :bio)
   end
 
   def set_user

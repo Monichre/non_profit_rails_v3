@@ -1,6 +1,6 @@
 class NonProfitsController < ApplicationController
   before_action :set_non_profit, only: [:show, :edit, :update, :destroy]
-  before_action :set_user, only: [:index, :update]
+  before_action :set_user, only: [:index, :update, :destroy]
 
   def index
     @non_profits = NonProfit.all
@@ -20,13 +20,19 @@ class NonProfitsController < ApplicationController
 
   def update
     # binding.pry
-    if current_user
-      @non_profit.users.push(@user)
+    if !(@user.non_profits.include?(@non_profit))
+      @user.non_profits.push(@non_profit)
       redirect_to user_path(@user)
     else
       @non_profit.update(non_profit_params)
       redirect_to non_profit_path(@non_profit)
     end
+  end
+
+  def destroy
+    @user.non_profits.destroy(@non_profit)
+    redirect_to user_path(@user)
+
   end
 
   private
