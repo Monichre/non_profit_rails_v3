@@ -9,10 +9,14 @@
           </p>
         </section>
         <section>
-          <% if user_signed_in? %>
-            <div class="form-wrapper">
-              <%= button_to "Add this non-profit", non_profit_path(non_profit), {method: 'patch', params: :non_profit} %>
-            </div>
+          <% if user_signed_in?  %>
+            <% if current_user.non_profits.include?(non_profit) %>
+              <p>You've already applied to this Non-profit</p>
+            <% else %>
+              <div class="form-wrapper">
+                <%= button_to "Add this non-profit", non_profit_path(non_profit), {method: 'patch', params: :non_profit} %>
+              </div>
+            <% end %>
           <% end %>
         </section>
       <% end %><!-- end of non_profit each loop -->
