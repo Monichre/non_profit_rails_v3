@@ -29,7 +29,7 @@
           <h1>Your Non-Profits</h1>
             <ul>
               <% @user.non_profits.each do |non_profit| %>
-                <h3><%= non_profit.name %> || <%= link_to "Remove", user_non_profit_path(@user, non_profit),
+                <h3><%= non_profit.name %> | <%= link_to "Remove", user_non_profit_path(@user, non_profit),
                                   :data => {:confirm => "You sure?",
                                   :method => "delete"} %></h3>
               <% end %>
@@ -40,7 +40,7 @@
         </div>
         <div class="user-bio">
           <% if @user.bio %>
-            <h1>Bio</h1>
+            <h1>Bio | <%= link_to "Edit", edit_user_path(@user), class: "edit-bio-link", :data => {edit: 'true'}, remote: true %> </h1>
             <p><%= @user.bio %></p>
           <% else %>
             <%= link_to "Add a bio", edit_user_path(@user), class: 'bio-link', remote: true %>

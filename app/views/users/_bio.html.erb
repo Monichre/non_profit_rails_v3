@@ -2,7 +2,7 @@
   <h3 class="text-center">Add a brief bio.</h3>
   <h4>Add a little about yourself and what you're looking for in a Non-Profit</h4>
   <%= form_for @user do |f| %>
-    <%= f.text_field :bio, class: "larger-text-field" %><br />
+    <%= f.text_field :bio, class: "form-control", rows: '3' %><br />
     <%= f.submit %>
   <% end %>
 </div>
