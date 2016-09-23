@@ -2,24 +2,8 @@
   <div class="row">
 
     <% if current_user.image.exists? %>
-      <%= image_tag current_user.image.url(:medium) %>
-    <% end %>
-<%= image_tag current_user.image.url(:medium) %>
-    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-    <!-- IF -->
-    <% if @user.non_profits.any? %>
-      <ul>
-        <% @user.non_profits.each do |non_profit| %>
-          <li><%= non_profit.name %></li>
-        <% end %>
-      </ul>
+      <%= image_tag current_user.image.url(:medium), class:"img-circle" %>
     <% else %>
-      <p>You don't currently have any non profits</p>
-    <% end %>
-    <!-- END -->
-    <section>
-      <p><%= link_to "Edit your profile", edit_user_path(@user) %></p>
-
       <div class="form-wrapper">
         <h2>Add an Image to your profile</h2>
         <%= form_for current_user, html: { class: 'form-horizontal', multipart: true } do |f| %>
@@ -29,7 +13,25 @@
           <%= f.button :submit, class: 'btn-success' %>
         <% end %>
       </div>
-    </section>
+    <% end %>
+    <main class="profile-main">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <!-- IF -->
+      <% if @user.non_profits.any? %>
+        <ul>
+          <% @user.non_profits.each do |non_profit| %>
+            <li><%= non_profit.name %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>You don't currently have any non profits</p>
+      <% end %>
+      <!-- END -->
+    </main>
+
+
+      
+
 
   </div>
 </div>
