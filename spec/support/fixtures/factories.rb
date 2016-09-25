@@ -2,8 +2,11 @@ FactoryGirl.define do
   factory(:user) do
     first_name('Liam')
     last_name('Ellis')
-    email('liamhellis@gmail.com')
+    bio('I need a job tho')
+    image { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
+    email('somethingelse@whatever.com')
     password('8milero')
+    id '2'
   end
 end
 

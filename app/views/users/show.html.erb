@@ -2,8 +2,8 @@
   <div class="row">
     <header class="profile-header row">
       <div class="header-image col-xs-4">
-        <% if current_user.image.exists? %>
-          <%= image_tag current_user.image.url(:medium), class:"img-circle" %>
+        <% if @user.image.exists? %> -->
+          <%= image_tag @user.image.url(:medium), class:"img-circle" %>
         <% else %>
           <div class="form-wrapper">
             <h2>Add an Image to your profile</h2>
@@ -20,8 +20,6 @@
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
       </div>
     </header>
-
-
     <main class="profile-main row">
       <div class="info col-xs-6">
         <div class="non_profits">
