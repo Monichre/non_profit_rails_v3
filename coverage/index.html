@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-25T16:14:28-07:00">2016-09-25T16:14:28-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-25T16:53:40-07:00">2016-09-25T16:53:40-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.17%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.72%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.13
+         1.06
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>44</b> files in total.
-    <b>262</b> relevant lines. 
-    <span class="green"><b>231</b> lines covered</span> and
-    <span class="red"><b>31</b> lines missed </span>
+    <b>266</b> relevant lines. 
+    <span class="green"><b>236</b> lines covered</span> and
+    <span class="red"><b>30</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -393,9 +393,9 @@
       <tr>
         <td class="strong"><a href="#b76851d81aee89be429fa7f805abb644c6c04107" class="src_link" title="spec/features/landing_pages_spec.rb">spec/features/landing_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>5</td>
-        <td>5</td>
+        <td>19</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -443,7 +443,7 @@
       <tr>
         <td class="strong"><a href="#9763d512622b10e635f51af248f920f050fa14ac" class="src_link" title="spec/models/user_spec.rb">spec/models/user_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>17</td>
+        <td>19</td>
         <td>12</td>
         <td>12</td>
         <td>0</td>
@@ -452,12 +452,12 @@
       
       <tr>
         <td class="strong"><a href="#8556994226ed392f24edcdd10dc31048fd55fc15" class="src_link" title="spec/rails_helper.rb">spec/rails_helper.rb</a></td>
-        <td class="green strong">96.3 %</td>
-        <td>46</td>
-        <td>27</td>
+        <td class="green strong">100.0 %</td>
+        <td>40</td>
         <td>26</td>
-        <td>1</td>
-        <td>2.8</td>
+        <td>26</td>
+        <td>0</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -477,7 +477,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -5041,8 +5041,8 @@
     <h3>spec/features/landing_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5071,52 +5071,94 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  it &quot;properly displays home page&quot; do</code>
+          <code class="ruby">  DatabaseCleaner.clean</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit new_user_session_path</code>
+          <code class="ruby">  it &quot;properly displays log in page&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">    visit new_user_session_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &#39;Log in&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in(&#39;user_email&#39;, :with =&gt; &#39;liamhellis@gmail.com&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in(&#39;user_password&#39;, :with =&gt; &#39;8milero&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_button(&#39;Log in&#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &#39;Toggle navigation Project ReachOut Volunteer Login Non-profit Login Sign Up Register your non-profit Invalid Email or password. Log in Email Password Remember me Sign up Forgot your password?&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">  # user = FactoryGirl.create(:user, id: 400, email: &#39;whatever@whatever.com&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"># Phantomjs.run(&#39;try_phantom.coffee&#39;)</code>
@@ -5500,85 +5542,97 @@
           <code class="ruby">RSpec.describe User, type: :model do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
           
-          <code class="ruby">  it {should validate_presence_of :first_name}</code>
+          <code class="ruby">  DatabaseCleaner.clean</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="5">
           
-          <code class="ruby">  it {should validate_presence_of :last_name}</code>
+          
+          <code class="ruby">  </code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="6">
           <span class="hits">2</span>
           
-          <code class="ruby">  it {should validate_presence_of :password}</code>
+          <code class="ruby">  it {should validate_presence_of :first_name}</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
+          <code class="ruby">  it {should validate_presence_of :last_name}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  it {should validate_presence_of :password}</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
           <code class="ruby">  it {should have_and_belong_to_many :non_profits}</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  user = FactoryGirl.create(:user)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  it &#39;first name default is Liam&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    user = FactoryGirl.create(:user)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    expect(user.first_name).to eq &quot;Liam&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  it &#39;has correct email&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    user = FactoryGirl.create(:user)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
+          <code class="ruby">  it &#39;has correct email&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(user.email).to eq &quot;somethingelse@whatever.com&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>
@@ -5591,11 +5645,11 @@
         <div class="source_table" id="8556994226ed392f24edcdd10dc31048fd55fc15">
   <div class="header">
     <h3>spec/rails_helper.rb</h3>
-    <h4><span class="green">96.3 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>27</b> relevant lines. 
+      <b>26</b> relevant lines. 
       <span class="green"><b>26</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -5650,16 +5704,16 @@
           <code class="ruby">require &#39;capybara/rails&#39;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;database_cleaner&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="10">
           <span class="hits">3</span>
           
           <code class="ruby">Dir[Rails.root.join(&#39;spec/support/**/*.rb&#39;)].each { |f| require f }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -5671,55 +5725,55 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
           <code class="ruby"># Checks for pending migration and applies them before tests are run.</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">ActiveRecord::Migration.maintain_test_schema!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">RSpec.configure do |config|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.include FactoryGirl::Syntax::Methods</code>
+          <code class="ruby">RSpec.configure do |config|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.fixture_path = &quot;#{::Rails.root}/spec/support/fixtures&quot;</code>
+          <code class="ruby">  config.before(:suite) do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.use_transactional_fixtures = false</code>
+          <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.infer_spec_type_from_file_location!</code>
+          <code class="ruby">    DatabaseCleaner.clean_with(:truncation)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -5731,67 +5785,67 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.before(:each) do</code>
+          <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
         <li class="covered" data-hits="17" data-linenumber="23">
           <span class="hits">17</span>
           
-          <code class="ruby">    DatabaseCleaner.strategy = :transaction</code>
+          <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="17" data-linenumber="24">
+          <span class="hits">17</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      example.run</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  config.before(:each, :js =&gt; true) do</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">    DatabaseCleaner.strategy = :truncation</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.include FactoryGirl::Syntax::Methods</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.fixture_path = &quot;#{::Rails.root}/spec/support/fixtures&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
-          <code class="ruby">  config.before(:each) do</code>
+          <code class="ruby">  config.use_transactional_fixtures = false</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="31">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
-          <code class="ruby">    DatabaseCleaner.start</code>
+          <code class="ruby">  config.infer_spec_type_from_file_location!</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">  config.filter_rails_from_backtrace!</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
@@ -5800,79 +5854,43 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  config.after(:each) do</code>
-        </li>
-      
-        <li class="covered" data-hits="17" data-linenumber="35">
-          <span class="hits">17</span>
-          
-          <code class="ruby">    DatabaseCleaner.clean</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  config.filter_rails_from_backtrace!</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="41">
+        <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
           <code class="ruby">Shoulda::Matchers.configure do |config|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
           <code class="ruby">  config.integrate do |with|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">    with.test_framework :rspec</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">    with.library :rails</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">end</code>
@@ -5950,8 +5968,8 @@
           <code class="ruby">    bio(&#39;I need a job tho&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">    image { File.new(&quot;#{Rails.root}/spec/support/fixtures/image.jpg&quot;) }</code>
         </li>
