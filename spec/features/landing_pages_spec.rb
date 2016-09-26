@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe "the user log in flow" do
-  DatabaseCleaner.clean
   it "properly displays log in page" do
     visit new_user_session_path
     expect(page).to have_content 'Log in'
@@ -9,11 +8,17 @@ describe "the user log in flow" do
     fill_in('user_password', :with => '8milero')
     click_button('Log in')
     expect(page).to have_content 'Toggle navigation Project ReachOut Volunteer Login Non-profit Login Sign Up Register your non-profit Invalid Email or password. Log in Email Password Remember me Sign up Forgot your password?'
-    click_link('.dropdown-toggle')
-    click_link('Profile')
-    expect(page).to have_content 'Liam Ellis'
+  end
+  it 'properly displays the user profile page' do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    visit user_path(user)
+    expect(page).to have_content('Liam Ellis')
   end
 end
+
+
+
 
 
 
