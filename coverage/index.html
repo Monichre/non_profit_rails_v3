@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-26T14:05:39-07:00">2016-09-26T14:05:39-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-26T15:35:30-07:00">2016-09-26T15:35:30-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">89.34%</span></span>
+    (<span class="covered_percent"><span class="green">90.65%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.14
+         1.17
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>44</b> files in total.
-    <b>272</b> relevant lines. 
-    <span class="green"><b>243</b> lines covered</span> and
-    <span class="red"><b>29</b> lines missed </span>
+    <b>278</b> relevant lines. 
+    <span class="green"><b>252</b> lines covered</span> and
+    <span class="red"><b>26</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -122,12 +122,12 @@
       
       <tr>
         <td class="strong"><a href="#63dc2fffcef55e143034fd722fd1853f2ac26ecf" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="red strong">54.55 %</td>
+        <td class="red strong">68.18 %</td>
         <td>42</td>
         <td>22</td>
-        <td>12</td>
-        <td>10</td>
-        <td>0.5</td>
+        <td>15</td>
+        <td>7</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -393,9 +393,9 @@
       <tr>
         <td class="strong"><a href="#b76851d81aee89be429fa7f805abb644c6c04107" class="src_link" title="spec/features/landing_pages_spec.rb">spec/features/landing_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>14</td>
-        <td>14</td>
+        <td>39</td>
+        <td>20</td>
+        <td>20</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -457,7 +457,7 @@
         <td>28</td>
         <td>28</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -1157,11 +1157,11 @@
         <div class="source_table" id="63dc2fffcef55e143034fd722fd1853f2ac26ecf">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="red">54.55 %</span> covered</h4>
+    <h4><span class="red">68.18 %</span> covered</h4>
     <div>
       <b>22</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -1204,20 +1204,20 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.html { redirect_to user_path(@user)}</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">      format.js</code>
         </li>
@@ -1396,8 +1396,8 @@
           <code class="ruby">  def set_user</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
           
           <code class="ruby">    @user = current_user</code>
         </li>
@@ -2395,13 +2395,13 @@
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">  Paperclip::Attachment.default_options[:path] = &quot;#{Rails.root}/spec/test_files/:class/:id_partition/:style.:extension&quot;</code>
+          <code class="ruby">  Paperclip::Attachment.default_options[:path] = &quot;#{Rails.root}/spec/support/fixtures/:extension&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
@@ -5041,8 +5041,8 @@
     <h3>spec/features/landing_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>14</b> relevant lines. 
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>20</b> relevant lines. 
+      <span class="green"><b>20</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5152,49 +5152,133 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">end</code>
+          <code class="ruby">  it &#39;creates user bio using Ajax&#39;, js: true do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    user = FactoryGirl.create(:user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    login_as(user, :scope =&gt; :user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    visit user_path(user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    within(&quot;div.user-bio&quot;) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      click_link(&#39;Edit&#39;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    # within(&quot;div.edit&quot;) do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">      # find(&#39;.bio&#39;, options = { wait: 3})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    # .to have_content(&quot;Add a brief bio. Add a little about yourself and what you&#39;re looking for in a Non-Profit&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby"># Phantomjs.run(&#39;try_phantom.coffee&#39;)</code>
@@ -5848,14 +5932,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="27">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="19" data-linenumber="27">
+          <span class="hits">19</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="28">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="19" data-linenumber="28">
+          <span class="hits">19</span>
           
           <code class="ruby">      example.run</code>
         </li>
@@ -5884,8 +5968,8 @@
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="33">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="19" data-linenumber="33">
+          <span class="hits">19</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
@@ -6010,8 +6094,8 @@
           <code class="ruby">    bio(&#39;I need a job tho&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="6">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    image { File.new(&quot;#{Rails.root}/spec/support/fixtures/image.jpg&quot;) }</code>
         </li>

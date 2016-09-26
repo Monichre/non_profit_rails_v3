@@ -15,6 +15,20 @@ describe "the user log in flow" do
     visit user_path(user)
     expect(page).to have_content('Liam Ellis')
   end
+  it 'creates user bio using Ajax', js: true do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    visit user_path(user)
+    within("div.user-bio") do
+      click_link('Edit')
+    end
+    # within("div.edit") do
+      # find('.bio', options = { wait: 3})
+    # end
+
+    # .to have_content("Add a brief bio. Add a little about yourself and what you're looking for in a Non-Profit")
+
+  end
 end
 
 
