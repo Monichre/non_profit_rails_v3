@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-25T16:53:40-07:00">2016-09-25T16:53:40-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-25T17:38:14-07:00">2016-09-25T17:38:14-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.72%</span></span>
+    (<span class="covered_percent"><span class="yellow">88.1%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.05
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>44</b> files in total.
-    <b>266</b> relevant lines. 
-    <span class="green"><b>236</b> lines covered</span> and
-    <span class="red"><b>30</b> lines missed </span>
+    <b>269</b> relevant lines. 
+    <span class="green"><b>237</b> lines covered</span> and
+    <span class="red"><b>32</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -392,12 +392,12 @@
       
       <tr>
         <td class="strong"><a href="#b76851d81aee89be429fa7f805abb644c6c04107" class="src_link" title="spec/features/landing_pages_spec.rb">spec/features/landing_pages_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>19</td>
-        <td>10</td>
-        <td>10</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td class="yellow strong">84.62 %</td>
+        <td>20</td>
+        <td>13</td>
+        <td>11</td>
+        <td>2</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -5039,11 +5039,11 @@
         <div class="source_table" id="b76851d81aee89be429fa7f805abb644c6c04107">
   <div class="header">
     <h3>spec/features/landing_pages_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="yellow">84.62 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -5116,34 +5116,34 @@
           <code class="ruby">    expect(page).to have_content &#39;Toggle navigation Project ReachOut Volunteer Login Non-profit Login Sign Up Register your non-profit Invalid Email or password. Log in Email Password Remember me Sign up Forgot your password?&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    click_link(&#39;.dropdown-toggle&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    click_link(&#39;Profile&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">  # user = FactoryGirl.create(:user, id: 400, email: &#39;whatever@whatever.com&#39;)</code>
+          <code class="ruby">    expect(page).to have_content &#39;Liam Ellis&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
@@ -5159,6 +5159,12 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby"># Phantomjs.run(&#39;try_phantom.coffee&#39;)</code>

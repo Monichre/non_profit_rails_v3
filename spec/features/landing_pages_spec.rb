@@ -9,9 +9,10 @@ describe "the user log in flow" do
     fill_in('user_password', :with => '8milero')
     click_button('Log in')
     expect(page).to have_content 'Toggle navigation Project ReachOut Volunteer Login Non-profit Login Sign Up Register your non-profit Invalid Email or password. Log in Email Password Remember me Sign up Forgot your password?'
-
+    click_link('.dropdown-toggle')
+    click_link('Profile')
+    expect(page).to have_content 'Liam Ellis'
   end
-  # user = FactoryGirl.create(:user, id: 400, email: 'whatever@whatever.com')
 end
 
 
