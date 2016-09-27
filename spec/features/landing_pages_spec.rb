@@ -22,12 +22,15 @@ describe "the user log in flow" do
     within("div.user-bio") do
       click_link('Edit')
     end
-    # within("div.edit") do
-      # find('.bio', options = { wait: 3})
-    # end
-
-    # .to have_content("Add a brief bio. Add a little about yourself and what you're looking for in a Non-Profit")
-
+    within("div.edit") do
+      find('.bio', options = { wait: 3}).find('#edit_user_1', options = { wait: 3})
+    end
+    within('#edit_user_1') do
+      find_field('user[bio]', options = { wait: 3})
+      # fill_in('input', with: 'No, I most def need a job')
+    end
+    click_button('Update User')
+    expect(page).to have_content("Project ReachOut Liam Ellis Home Dropdown --> Liam Ellis You don't currently have any non profits Bio | Edit I need a job tho")
   end
 end
 
